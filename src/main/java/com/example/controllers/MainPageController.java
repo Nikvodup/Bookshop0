@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/bookshop")
 public class MainPageController {
 
     private final BookService bookService;
@@ -30,7 +30,7 @@ public class MainPageController {
         return bookService.getBooksData();
     }
 
-    @GetMapping("/")
+    @GetMapping("/main")
     public String mainPage(Model model){
         model.addAttribute("serverTime", new SimpleDateFormat("hh:mm:ss").format(new Date()));
         return "index";
